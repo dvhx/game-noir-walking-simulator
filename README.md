@@ -2,7 +2,7 @@
 
 Walk inside noir themed city. Press F1 to show help.
 
-[<img src="image/screenhot.jpg">](https://dvhx.github.io/game-noir-walking-simulator/)
+[<img src="image/screenshot.jpg">](https://dvhx.github.io/game-noir-walking-simulator/)
 
 ### My other games
 
