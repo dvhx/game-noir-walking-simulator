@@ -86,6 +86,10 @@ export class Wasd {
             case 'KeyM':
                 SC.miniMap.toggle();
                 break;
+            // load other maps
+            case 'KeyN':
+                SC.e.fps.onclick();
+                break;
             // jumping
             case 'Space':
                 if (!this.state.jumping) {
