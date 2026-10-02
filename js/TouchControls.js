@@ -25,8 +25,8 @@ export class TouchControls {
         // look state (right half)
         this.rightTouchId = null;
         this.lastRightPos = new THREE.Vector2();
-        this.yaw = this.camera.rotation.y;
-        this.pitch = this.camera.rotation.x;
+        this.yaw = -Math.PI / 2; //this.camera.rotation.y;
+        this.pitch = 0;//this.camera.rotation.x;
         // events
         this.element.style.touchAction = 'none';
         this.element.addEventListener('touchstart', (e) => this._onTouchStart(e), false);

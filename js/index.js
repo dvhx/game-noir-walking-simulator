@@ -96,13 +96,13 @@ window.addEventListener('DOMContentLoaded', function () {
         SC.choose(['Empty map', 'Small city', 'Large city', 'MiniMap']).then((s) => {
             switch (s) {
             case 'Empty map':
-                SC.World.fetch('./map/empty.nws', SC.World.save);
+                SC.World.fetch('./map/empty.nws?v=24', SC.World.save);
                 break;
             case 'Small city':
-                SC.World.fetch('./map/small.nws', SC.World.save);
+                SC.World.fetch('./map/small.nws?v=24', SC.World.save);
                 break;
             case 'Large city':
-                SC.World.fetch('./map/large.nws', SC.World.save);
+                SC.World.fetch('./map/large.nws?v=24', SC.World.save);
                 break;
             case 'MiniMap':
                 SC.miniMap.toggle();

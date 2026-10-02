@@ -22,41 +22,11 @@
    "rotation": 0,
    "shop": "2",
    "floors": [
-    "5",
+    "8",
     "13"
    ],
    "roof": "3",
    "leftAd": "4",
-   "rightAd": 0,
-   "fireEscape": false,
-   "signage": 0
-  },
-  {
-   "x": 0,
-   "z": 1,
-   "rotation": 180,
-   "shop": "9",
-   "floors": [
-    "5",
-    "12"
-   ],
-   "roof": "1",
-   "leftAd": 0,
-   "rightAd": 0,
-   "fireEscape": false,
-   "signage": 0
-  },
-  {
-   "x": 1,
-   "z": 1,
-   "rotation": 180,
-   "shop": "9",
-   "floors": [
-    "3",
-    "2"
-   ],
-   "roof": "3",
-   "leftAd": 0,
    "rightAd": 0,
    "fireEscape": false,
    "signage": 0
@@ -74,7 +44,7 @@
    "leftAd": 0,
    "rightAd": 0,
    "fireEscape": false,
-   "signage": 1
+   "signage": 3
   },
   {
    "x": 3,
@@ -1451,6 +1421,37 @@
    "rightAd": 0,
    "fireEscape": true,
    "signage": 4
+  },
+  {
+   "x": 0,
+   "z": 1,
+   "rotation": 180,
+   "shop": "10",
+   "floors": [
+    "4",
+    "16",
+    "12"
+   ],
+   "roof": "2",
+   "leftAd": 0,
+   "rightAd": 0,
+   "fireEscape": false,
+   "signage": 0
+  },
+  {
+   "x": 1,
+   "z": 1,
+   "rotation": 180,
+   "shop": "1",
+   "floors": [
+    "7",
+    "7"
+   ],
+   "roof": "4",
+   "leftAd": 0,
+   "rightAd": 0,
+   "fireEscape": false,
+   "signage": 0
   }
  ],
  "roads": [
@@ -2235,15 +2236,15 @@
  ],
  "camera": {
   "position": [
-   -8.743165354864919,
+   -6.640020960998059,
    1.7,
-   4.213792006439507
+   5.30779487858762
   ],
   "quaternion": [
-   0.001130512776065685,
-   -0.7084540593748971,
-   0.00113483607893393,
-   0.7057551132249534
+   -0.009722411877308332,
+   -0.7070399385517641,
+   -0.00972241187730822,
+   0.7070399385517722
   ]
  }
 }

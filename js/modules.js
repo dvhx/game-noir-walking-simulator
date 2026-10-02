@@ -69,7 +69,7 @@ import { Editor } from './Editor.js';
 SC.Editor = Editor;
 import { Footsteps } from './Footsteps.js';
 SC.Footsteps = Footsteps;
-import { TouchControls } from './TouchControls.js?v=22';
+import { TouchControls } from './TouchControls.js?v=24';
 SC.TouchControls = TouchControls;
 import { World } from './World.js';
 SC.World = World;

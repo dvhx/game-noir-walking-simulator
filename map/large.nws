@@ -3,66 +3,6 @@
  "houses": [
   {
    "x": 2,
-   "z": -1,
-   "rotation": 0,
-   "shop": "1",
-   "floors": [
-    "5",
-    "16"
-   ],
-   "roof": "4",
-   "leftAd": 0,
-   "rightAd": 0,
-   "fireEscape": false,
-   "signage": 0
-  },
-  {
-   "x": 1,
-   "z": -1,
-   "rotation": 0,
-   "shop": "2",
-   "floors": [
-    "5",
-    "13"
-   ],
-   "roof": "3",
-   "leftAd": "4",
-   "rightAd": 0,
-   "fireEscape": false,
-   "signage": 0
-  },
-  {
-   "x": 0,
-   "z": 1,
-   "rotation": 180,
-   "shop": "9",
-   "floors": [
-    "5",
-    "12"
-   ],
-   "roof": "1",
-   "leftAd": 0,
-   "rightAd": 0,
-   "fireEscape": false,
-   "signage": 0
-  },
-  {
-   "x": 1,
-   "z": 1,
-   "rotation": 180,
-   "shop": "9",
-   "floors": [
-    "3",
-    "2"
-   ],
-   "roof": "3",
-   "leftAd": 0,
-   "rightAd": 0,
-   "fireEscape": false,
-   "signage": 0
-  },
-  {
-   "x": 2,
    "z": 1,
    "rotation": 180,
    "shop": "9",
@@ -2750,6 +2690,67 @@
    "rightAd": 0,
    "fireEscape": true,
    "signage": 0
+  },
+  {
+   "x": 0,
+   "z": 1,
+   "rotation": 180,
+   "shop": "9",
+   "floors": [
+    "10",
+    "14"
+   ],
+   "roof": "3",
+   "leftAd": 0,
+   "rightAd": 0,
+   "fireEscape": false,
+   "signage": 0
+  },
+  {
+   "x": 1,
+   "z": 1,
+   "rotation": 180,
+   "shop": "6",
+   "floors": [
+    "7",
+    "6",
+    "13"
+   ],
+   "roof": "4",
+   "leftAd": 0,
+   "rightAd": 0,
+   "fireEscape": true,
+   "signage": 4
+  },
+  {
+   "x": 1,
+   "z": -1,
+   "rotation": 0,
+   "shop": "5",
+   "floors": [
+    "8",
+    "14"
+   ],
+   "roof": "4",
+   "leftAd": 0,
+   "rightAd": 0,
+   "fireEscape": true,
+   "signage": 2
+  },
+  {
+   "x": 2,
+   "z": -1,
+   "rotation": 0,
+   "shop": "1",
+   "floors": [
+    "3",
+    "12"
+   ],
+   "roof": "1",
+   "leftAd": 0,
+   "rightAd": 0,
+   "fireEscape": false,
+   "signage": 0
   }
  ],
  "roads": [
@@ -4310,15 +4311,15 @@
  ],
  "camera": {
   "position": [
-   -8.086812435436919,
+   -8.262333070195835,
    1.7,
-   4.765710701455112
+   4.128487403867432
   ],
   "quaternion": [
-   0.0068173976538579845,
-   -0.7041491644963576,
-   0.00676134043031914,
-   0.709987155872482
+   0.007735121210064861,
+   -0.7109421397444295,
+   0.00782067897378514,
+   0.7031644749387349
   ]
  }
 }
