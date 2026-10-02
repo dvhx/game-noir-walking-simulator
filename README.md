@@ -4,6 +4,10 @@ Walk inside noir themed city. Press F1 to show help.
 
 [<img src="image/screenshot.jpg">](https://dvhx.github.io/game-noir-walking-simulator/)
 
+It look decent from top view too:
+
+[<img src="image/screenshot-top.jpg">](https://dvhx.github.io/game-noir-walking-simulator/)
+
 ### My other games
 
 - [Alien invasion](https://github.com/dvhx/game-alien-invasion) - 2D bullet hell alien shooter, collect credits and upgrade your ship
