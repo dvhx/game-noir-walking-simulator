@@ -1,0 +1,81 @@
+{
+ "name": "empty",
+ "houses": [
+  {
+   "x": 1,
+   "z": -1,
+   "rotation": 0,
+   "shop": "4",
+   "floors": [
+    "11",
+    "7"
+   ],
+   "roof": "3",
+   "leftAd": "7",
+   "rightAd": 0,
+   "fireEscape": false,
+   "signage": 0
+  }
+ ],
+ "roads": [
+  {
+   "x": 0,
+   "z": 0,
+   "n": true,
+   "e": true,
+   "s": true,
+   "w": true
+  },
+  {
+   "x": 0,
+   "z": -1,
+   "n": false,
+   "e": true,
+   "s": false,
+   "w": false
+  },
+  {
+   "x": -1,
+   "z": 0,
+   "n": true,
+   "e": false,
+   "s": false,
+   "w": false
+  },
+  {
+   "x": 0,
+   "z": 1,
+   "n": false,
+   "e": false,
+   "s": false,
+   "w": true
+  },
+  {
+   "x": 1,
+   "z": 0,
+   "n": false,
+   "e": false,
+   "s": true,
+   "w": false
+  }
+ ],
+ "lamps": [
+  {
+   "x": 1,
+   "z": 1
+  }
+ ],
+ "camera": {
+  "position": [
+   -5.668187086490705,
+   1.7,
+   4.88160310375128
+  ],
+  "quaternion": [
+   -0.0017002320281493289,
+   -0.7052302299438494,
+   -0.0016912531356386164,
+   0.7089743095819672
+  ]
+ }
+}

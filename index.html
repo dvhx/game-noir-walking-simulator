@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noir walking simulator</title>
+    <style>
+body { margin: 0; overflow: hidden; font-size: medium; }
+canvas { display: block; }
+#fps {
+    position: fixed;
+    left: 1ex;
+    top: 1ex;
+    color: yellow;
+    font-size: x-small;
+}
+#fullscreen {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    color: yellow;
+    width: 1cm;
+    height: 1cm;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    user-select: none;
+}
+#touchhelp {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url(image/touch.png);
+    z-index: 11;
+    pointer-events: none;
+    outline: 1px solid red;
+    opacity: 0;
+    visibility: hidden;
+}
+#touchhelp.show {
+    opacity: 1;
+    visibility: visible;
+}
+#touchhelp.fade {
+    animation: fade 2s 5s forwards;
+}
+@keyframes fade {
+    to { opacity: 0; visibility: hidden; }
+}
+#minimap {
+    z-index: 1;
+    outline: 0px solid cyan;
+    position: fixed;
+    right: 1ex;
+    top: 1ex;
+}
+#crosshair {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    margin: -2px 0 0 -2px;
+    background: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10;
+    color: skyblue;
+}
+#crosshair_info {
+    position: relative;
+    top: -1ex;
+    left: 1ex;
+    min-width: 10em;
+    display: inline-block;
+}
+kbd {
+    background-color: silver;
+    border: 1px solid gray;
+    padding: 0.2ex;
+    border-radius: 0.5ex;
+}
+dialog {
+    margin: auto;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 0 1ex 2ex rgb(0 0 0 / 0.1);
+    border-radius: 1ex;
+}
+dialog h1 {
+    margin: 0;
+    font-size: medium;
+    text-align: center;
+}
+.toast {
+    color: yellow !important;
+}
+    </style>
+
+    <script type="module" src="js/modules.js?v=23"></script>
+    <script src="js/index.js?v=23"></script>
+
+</head>
+<body>
+    <span id="fps" style="display: inline-block; width: 4em;"></span>
+    <canvas id="minimap"></canvas>
+
+    <div id="crosshair"><span id="crosshair_info"></span></div>
+
+    <dialog id="help">
+        <h1>Shortcut keys</h1>
+        <div><kbd>F1</kbd> - show/hide this help</div>
+        <div><kbd>PgUp</kbd>,<kbd>PgDn</kbd> - move camera up/down (default is 1.7m)</div>
+        <div><kbd>W</kbd>,<kbd>A</kbd>,<kbd>S</kbd>,<kbd>D</kbd> - walking, <kbd>space</kbd> jumps, hold <kbd>shift</kbd> to walk slow</div>
+        <div><kbd>M</kbd> - toggle minimap on/off</div>
+        <hr>
+        <div><kbd>E</kbd> - enable/disable editor mode:</div>
+        <div><kbd>H</kbd> - change mode to adding houses (click on ground to add house)</div>
+        <div><kbd>R</kbd> - change mode to adding roads (click on ground to add road)</div>
+        <div><kbd>O</kbd> - change orientation of the house you are pointing at (ccw by 90°)</div>
+        <div><kbd>V</kbd> - when pointing on side of the house, cycle through ads</div>
+        <div><kbd>F</kbd> - when pointing on the house, toggle fire escape on/off</div>
+        <div><kbd>G</kbd> - when pointing on the house, cycle through signage</div>
+        <div><kbd>L</kbd> - when pointing on the ground, add/remove lamp</div>
+        <div><kbd>B</kbd> - toggle house alwaysVisible (for houses at the end of long road)</div>
+        <div><kbd>Ctrl+Z</kbd> - undo last change</div>
+        <div><kbd>F2</kbd> - save world (houses, roads, lamps,...)</div>
+        <div><kbd>F3</kbd> - export world to *.nws file, <kbd>F4</kbd> import *.nws file</div>
+        <div><kbd>1</kbd>,<kbd>2</kbd>,<kbd>3</kbd>,<kbd>4</kbd>,<kbd>5</kbd> - change number of floors of selected house</div>
+    </dialog>
+
+    <div id="touchhelp"></div>
+    <div id="fullscreen">⛶</div>
+
+    <div id="tune_lights" style="display: none; position: fixed; top: 0; left: 2cm; right: 2cm; color: yellow;">
+        <div>amb<input id="tune_lighths_amb" type="range" min=0 max=3 step=0.001 value=2></div>
+        <div>dir<input id="tune_lighths_dir" type="range" min=0 max=3 step=0.001 value=3.0></div>
+    </div>
+
+</body>
+</html>
+

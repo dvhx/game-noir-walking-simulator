@@ -1,0 +1,42 @@
+#!/usr/bin/env ngspicejs
+// Check if all floors fit into x<-5,5> y<0,5> and if there is vertical wall at z=5
+// linter: ngspicejs-lint
+// global: file_read_obj
+"use strict";
+
+clear_screen();
+
+function obj_aabb(aObj) {
+    // Find AABB of obj model
+    var x = aObj.v.column(0);
+    var y = aObj.v.column(1);
+    var z = aObj.v.column(2);
+    return {
+        min_x: x.min(),
+        max_x: x.max(),
+        min_y: y.min(),
+        max_y: y.max(),
+        min_z: z.min(),
+        max_z: z.max()
+    };
+}
+
+dir_recursive('.').sort().filter((fn) => file_ext(fn) === '.obj').forEach((fn) => {
+    var obj = file_read_obj(fn, true);
+    //echo(JSON.stringify(obj.g));
+    var aabb = obj_aabb(obj);
+    delete aabb.min_z;
+    delete aabb.max_z;
+    var z5 = obj.v.column(2).sort((a,b) => Math.abs(a - 5) - Math.abs(b - 5))[0];
+    //echo_json(zz.slice(0, 10));
+    if (aabb.min_x !== -5 || aabb.max_x !== 5 || aabb.min_y !== 0 || aabb.max_y !== 5 || z5 !== 5) {
+        echo(fn);
+        echo_json(aabb);
+        echo('z5', z5);
+        beep();
+        exit(1);
+    }
+    //echo(aabb.max_y);
+});
+
+echo('all ok');
